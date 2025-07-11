@@ -1,4 +1,4 @@
-baseURL: "./"
+baseURL: "https://www.xiaoxuanzhang.com"
 relativeURLs: true
 
 languageCode: "en-us"
