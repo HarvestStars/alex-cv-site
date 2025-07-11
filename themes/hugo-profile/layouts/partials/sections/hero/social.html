@@ -1,0 +1,27 @@
+<span>
+    {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
+    <span class="px-1">
+        <a href="{{ .url }}"
+            {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
+            class="btn social-icon"
+        >
+            <i class="{{ .icon }}"></i>
+        </a>
+    </span>
+    {{ end }}
+
+    {{ range .Site.Params.hero.socialLinks.customIcons }}
+    <span class="px-1">
+        <a href="{{ .url }}"
+            {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
+            class="btn social-icon"
+        >
+            <img src="{{ .icon }}">
+        </a>
+    </span>
+    {{ end }}
+
+    <!-- <a href="https://www.tradingview.com/u/Alex_Chomolungma/" class="btn btn-icon btn-outline-light">
+        <img src="/images/icons/tradingview.jpg" alt="TradingView" width="10" height="10" style="object-fit: contain;" />
+    </a> -->
+</span>
