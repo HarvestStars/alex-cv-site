@@ -54,9 +54,9 @@
                 {{ if and (or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo)) (.Site.Params.navbar.showBrandLogo | default true) }}
                 <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
                     class="d-inline-block align-top">
-                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                <!-- {{ .Site.Params.navbar.brandName | default .Site.Params.title }} -->
                 {{ else }}
-                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                <!-- {{ .Site.Params.navbar.brandName | default .Site.Params.title }} -->
                 {{ end }}
             </a>
 
