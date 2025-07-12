@@ -146,7 +146,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "/Resume%20of%20Xiaoxuan%20Zhang.pdf"
+      url: "/Xiaoxuan%20Zhang.pdf"
       download: true
       newPage: false
     socialLinks:
