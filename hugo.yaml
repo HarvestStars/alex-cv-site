@@ -38,6 +38,7 @@ params:
   favicon: ""
 
   useBootstrapCDN: false
+  customCSS: true
   mathjax: false
   animate: true
 
