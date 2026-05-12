@@ -1,0 +1,108 @@
+{{ if .Site.Params.articles.enable | default false }}
+<section id="articles" class="py-5">
+    <div class="container">
+        <h3 class="text-center" style="color: var(--text-secondary-color);">{{ .Site.Params.articles.title | default "Articles" }}</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="articles-container">
+                    {{ range $index, $item := .Site.Params.articles.items }}
+                    <div class="article-entry{{ if gt $index 0 }} article-entry-divider{{ end }}">
+                        <span class="article-index">[{{ add $index 1 }}]</span>
+                        {{ if $item.url }}
+                        <a class="article-title" href="{{ $item.url }}" target="_blank">{{ $item.title }}</a>
+                        {{ else }}
+                        <span class="article-title article-title-plain">{{ $item.title }}</span>
+                        {{ end }}
+                        <div class="article-authors">{{ $item.authors }}</div>
+                        <div class="article-venue">
+                            <span class="article-venue-name">{{ $item.venue }}</span>
+                            {{ if $item.date }}
+                            <span class="article-date">· {{ $item.date }}</span>
+                            {{ else if $item.year }}
+                            <span class="article-date">· {{ $item.year }}</span>
+                            {{ end }}
+                            {{ if $item.note }}
+                            <span class="article-note">— {{ $item.note }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.articles-container {
+    background-color: #212529 !important;
+    border-radius: .75rem;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.35);
+}
+.article-entry {
+    padding: 1.4rem 0.25rem;
+    background-color: transparent !important;
+}
+.article-entry-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.article-index {
+    display: block;
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: var(--text-secondary-color);
+    opacity: 0.55;
+    margin-bottom: 0.28rem;
+    background-color: transparent !important;
+}
+.article-title {
+    font-size: 0.975rem;
+    font-weight: 600;
+    line-height: 1.45;
+    display: block;
+    margin-bottom: 0.35rem;
+    background-color: transparent !important;
+}
+a.article-title {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: border-color 0.2s, color 0.2s;
+}
+a.article-title:hover {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+}
+.article-title-plain {
+    color: var(--text-color);
+}
+.article-authors {
+    font-size: 0.84rem;
+    color: var(--text-secondary-color);
+    margin-bottom: 0.2rem;
+    background-color: transparent !important;
+}
+.article-venue {
+    font-size: 0.84rem;
+    background-color: transparent !important;
+}
+.article-venue-name {
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+.article-date {
+    color: var(--text-secondary-color);
+    opacity: 0.7;
+    margin-left: 2px;
+}
+.article-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary-color);
+    opacity: 0.6;
+    font-style: italic;
+}
+</style>
+{{ end }}

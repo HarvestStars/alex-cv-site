@@ -118,11 +118,8 @@ params:
           enable: false
         content: |
           - Began trading in the China A-share market in 2013, later expanded into cryptocurrency markets in 2018.
-
           - Developed and published open-source Pine Script strategies on TradingView, focusing on momentum, volatility, and pattern-based signals.
-
           - Built a custom GPU-accelerated C++ quantitative trading platform, capable of high-speed multi-asset backtesting and real-time strategy execution using CUDA.
-
           - Continuously iterating on architecture and strategies, with strong emphasis on parallel computing, infrastructure scalability, and low-latency data pipelines.
 
       - job: "Core Developer"
@@ -136,13 +133,9 @@ params:
           enable: false
         content: |
           - Led the full lifecycle development of Lava, a proof-of-capacity (PoC) based cryptocurrency forked from Bitcoin Core.
-
           - Architected and implemented consensus modifications to support PoC mining, enhancing energy efficiency compared to PoW.
-
           - Oversaw system integration, wallet and miner tools, and network bootstrapping.
-
           - Managed codebase releases, testnet deployment, mainnet launch, and listing on HitBTC exchange.
-
           - Coordinated a small remote team of developers, ensuring agile delivery and robust documentation.
 
       - job: "Senior Software Engineer"
@@ -156,7 +149,6 @@ params:
           enable: false
         content: |
           - Led the High-Availability (HA) system design and development of Mavenir's distributed element control platform, ensuring robust uptime and fault tolerance.
-
           - Focused on telecom-grade reliability, implementing failover, state recovery, and multi-node synchronization.
 
   # Education
@@ -191,6 +183,25 @@ params:
           url: "https://www.whu.edu.cn/"
         date: "2009 - 2013"
         GPA: "3.38 out of 4.0"
+
+  # Articles
+  articles:
+    enable: true
+    items:
+      - title: "Twintinuum: Advancing Self-Calibrating Physical-Digital Continuum"
+        authors: "Zhiheng Yang, Xiaoxuan Zhang, Adam Belloum, Chrysa Papagianni, Paola Grosso"
+        venue: "IEEE INFOCOM 2026"
+        type: "Conference Paper"
+        year: "2026"
+        note: "Top-tier networking & communications conference (CORE A*)"
+        url: "https://www.researchgate.net/publication/404693525_Twintinuum_Advancing_Self-Calibrating_Physical-Digital_Continuum"
+
+      - title: "The Simple Math Behind Foundation Models(e.g. LLM): Cross-Entropy, Not Magic"
+        authors: "Xiaoxuan Zhang"
+        venue: "LinkedIn Pulse"
+        type: "Blog Post"
+        date: "Sep 9, 2025"
+        url: "https://www.linkedin.com/pulse/simple-math-behind-foundation-models-cross-entropy-magic-zhang-cf1gc/"
 
   # Projects
   projects:
