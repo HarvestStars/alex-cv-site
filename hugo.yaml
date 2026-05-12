@@ -95,6 +95,36 @@ params:
   experience:
     enable: true
     items:
+      - job: "AI Researcher"
+        tab: "AI"
+        company: "GeekChomolungma"
+        companyUrl: "https://github.com/GeekChomolungma"
+        date: "2024 - Present"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: |
+          - Content coming soon.
+
+      - job: "Independent Quantitative Trading Researcher"
+        tab: "Crypto Trading"
+        company: "GeekChomolungma"
+        companyUrl: "https://github.com/GeekChomolungma"
+        date: "June 2013 - Present"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+        content: |
+          - Began trading in the China A-share market in 2013, later expanded into cryptocurrency markets in 2018.
+
+          - Developed and published open-source Pine Script strategies on TradingView, focusing on momentum, volatility, and pattern-based signals.
+
+          - Built a custom GPU-accelerated C++ quantitative trading platform, capable of high-speed multi-asset backtesting and real-time strategy execution using CUDA.
+
+          - Continuously iterating on architecture and strategies, with strong emphasis on parallel computing, infrastructure scalability, and low-latency data pipelines.
+
       - job: "Core Developer"
         tab: "Blockchain"
         company: "Lava"
@@ -114,24 +144,6 @@ params:
           - Managed codebase releases, testnet deployment, mainnet launch, and listing on HitBTC exchange.
 
           - Coordinated a small remote team of developers, ensuring agile delivery and robust documentation.
-
-      - job: "Independent Quantitative Trading Researcher"
-        tab: "Trading"
-        company: "GeekChomolungma"
-        companyUrl: "https://github.com/GeekChomolungma"
-        date: "June 2013 - Present"
-        info:
-          enable: false
-        featuredLink:
-          enable: false
-        content: |
-          - Began trading in the China A-share market in 2013, later expanded into cryptocurrency markets in 2018.
-
-          - Developed and published open-source Pine Script strategies on TradingView, focusing on momentum, volatility, and pattern-based signals.
-
-          - Built a custom GPU-accelerated C++ quantitative trading platform, capable of high-speed multi-asset backtesting and real-time strategy execution using CUDA.
-
-          - Continuously iterating on architecture and strategies, with strong emphasis on parallel computing, infrastructure scalability, and low-latency data pipelines.
 
       - job: "Senior Software Engineer"
         tab: "MicroServices"
