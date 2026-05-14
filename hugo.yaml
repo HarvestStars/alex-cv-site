@@ -95,32 +95,35 @@ params:
   experience:
     enable: true
     items:
-      - job: "AI Researcher"
+      - job: "TSFM Researcher (Master's Thesis)"
         tab: "AI"
-        company: "GeekChomolungma"
-        companyUrl: "https://github.com/GeekChomolungma"
+        company: "University of Amsterdam"
+        companyUrl: "https://www.uva.nl/"
         date: "2024 - Present"
         featuredLink:
           enable: false
         info:
           enable: false
         content: |
-          - Content coming soon.
+          - Researching Time Series Foundation Models (TSFMs) with a focus on the Chronos model family — pre-trained probabilistic forecasters built on language model architectures — as the core subject of the master's thesis at UvA.
+          - Applying Chronos2 to cryptocurrency price series for multi-horizon trend forecasting, evaluating zero-shot and fine-tuned performance on volatile, non-stationary financial data.
+          - In-depth understanding of probabilistic forecast objectives, especially pinball (quantile) loss, with hands-on analysis of their behavior on fat-tailed distributions.
+          - Investigating the transferability and fine-tuning generalization of large-scale TSFMs for forecasting cryptocurrencies such as BTC, ETH, and LTC under rapidly shifting market regimes.
 
-      - job: "Independent Quantitative Trading Researcher"
+      - job: "Independent Quantitative Trading Developer"
         tab: "Crypto Trading"
         company: "GeekChomolungma"
         companyUrl: "https://github.com/GeekChomolungma"
-        date: "June 2013 - Present"
+        date: "2019 - Present"
         info:
           enable: false
         featuredLink:
           enable: false
         content: |
-          - Began trading in the China A-share market in 2013, later expanded into cryptocurrency markets in 2018.
-          - Developed and published open-source Pine Script strategies on TradingView, focusing on momentum, volatility, and pattern-based signals.
-          - Built a custom GPU-accelerated C++ quantitative trading platform, capable of high-speed multi-asset backtesting and real-time strategy execution using CUDA.
-          - Continuously iterating on architecture and strategies, with strong emphasis on parallel computing, infrastructure scalability, and low-latency data pipelines.
+          - Built a real-time market data pipeline syncing order book snapshots, trades, and OHLCV streams from Binance into MongoDB (cold storage) and Redis (hot cache), forming the data infrastructure layer for all downstream strategy research.
+          - Ported and adapted statistical trading strategies from TradingView Pine Script — covering momentum, volatility breakout, and candlestick pattern signals — into a live execution framework on Binance, with real-money validation.
+          - Fine-tuned quantile-regression-based time series foundation models on cryptocurrency price series to capture asymmetric return distributions; constructed and backtested AI-driven alpha signals derived from predicted quantile spreads and directional probabilities.
+          - Completed Optiver's market-making training program, gaining structured exposure to delta-neutral positioning, and bid-ask spread management.
 
       - job: "Core Developer"
         tab: "Blockchain"
@@ -135,8 +138,6 @@ params:
           - Led the full lifecycle development of Lava, a proof-of-capacity (PoC) based cryptocurrency forked from Bitcoin Core.
           - Architected and implemented consensus modifications to support PoC mining, enhancing energy efficiency compared to PoW.
           - Oversaw system integration, wallet and miner tools, and network bootstrapping.
-          - Managed codebase releases, testnet deployment, mainnet launch, and listing on HitBTC exchange.
-          - Coordinated a small remote team of developers, ensuring agile delivery and robust documentation.
 
       - job: "Senior Software Engineer"
         tab: "MicroServices"
@@ -161,18 +162,17 @@ params:
           name: "University of Amsterdam"
           url: "https://www.uva.nl/"
         date: "2024 - 2026"
-        GPA: "8.0 out of 10.0"
+        GPA: "7.7/10.0"
         content: |-
           - Built a solid foundation in stochastic differential equations (SDEs), Monte Carlo simulations, and numerical methods for option pricing.
           - Gained in-depth understanding of numerical PDE solvers, discretization techniques, and iterative schemes in the context of scientific computation.
-          - Completed advanced coursework in parallel systems, GPU computing (CUDA), and Big Data infrastructure.
 
       - title: "Master of Control Engineering"
         school:
           name: "Wuhan University"
           url: "https://www.whu.edu.cn/"
         date: "2013 - 2015"
-        GPA: "3.5 out of 4.0"
+        GPA: "3.5/4.0"
         content: |-
           - Core courses included Matrix Theory, Control Theory, Numerical Analysis, and Optimization.
           - Proficient in modeling and simulation of industry processing, focusing on industry efficiency solutions by regression and classification tools like SVM, LS-SVM, and PSO.
@@ -182,7 +182,7 @@ params:
           name: "Wuhan University"
           url: "https://www.whu.edu.cn/"
         date: "2009 - 2013"
-        GPA: "3.38 out of 4.0"
+        GPA: "3.38/4.0"
 
   # Articles
   articles:
