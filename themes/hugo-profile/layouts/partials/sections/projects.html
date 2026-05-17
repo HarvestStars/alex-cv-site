@@ -4,6 +4,13 @@
         <h3 class="text-center">{{ .Site.Params.projects.title | default "Projects" }}</h3>
         <div class="row justify-content-center px-3 px-md-5">
             {{ range .Site.Params.projects.items }}
+            {{ $projectURL := .url }}
+            {{ if and (not $projectURL) (.links) }}
+            {{ $projectURL = (index .links 0).url }}
+            {{ end }}
+            {{ if and (not $projectURL) (.featured) }}
+            {{ $projectURL = .featured.link }}
+            {{ end }}
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="{{ .title }}">
                     <div class="card-head">
@@ -15,29 +22,19 @@
                             <span class="badge badge-secondary">{{ . }}</span>
                             {{ end }}
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                        <h5 class="card-title bg-transparent mt-1">
+                            {{ if $projectURL }}
+                            <a class="project-title-link" href="{{ $projectURL }}" target="_blank" rel="noopener noreferrer">
+                                {{ .title }}
+                            </a>
+                            {{ else }}
+                            {{ .title }}
+                            {{ end }}
+                        </h5>
                         <div class="card-text bg-transparent secondary-font">
                             {{ .content }}
                         </div>
                     </div>
-                    {{ if or (.links) (.featured) }}
-                    <div class="card-footer py-3">
-                        {{ range .links }}
-                        <span class="m-1 mx-2">
-                            <a href="{{ .url }}" target="_blank">
-                                <i class="{{ .icon }}"></i>
-                            </a>
-                        </span>
-                        {{ end }}
-                        {{ if .featured }}
-                        <span class="float-end">
-                            <a class="btn btn-sm" href="{{ .featured.link }}" target="_blank">
-                                {{ .featured.name }}
-                            </a>
-                        </span>
-                        {{ end }}
-                    </div>
-                    {{ end }}
                 </div>
             </div>
             {{ end }}
