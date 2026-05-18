@@ -2,42 +2,95 @@
 <section id="projects" class="py-5">
     <div class="container">
         <h3 class="text-center">{{ .Site.Params.projects.title | default "Projects" }}</h3>
-        <div class="row justify-content-center px-3 px-md-5">
-            {{ range .Site.Params.projects.items }}
-            {{ $projectURL := .url }}
-            {{ if and (not $projectURL) (.links) }}
-            {{ $projectURL = (index .links 0).url }}
-            {{ end }}
-            {{ if and (not $projectURL) (.featured) }}
-            {{ $projectURL = .featured.link }}
-            {{ end }}
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="{{ .title }}">
-                    <div class="card-head">
-                        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
-                    </div>
-                    <div class="card-body bg-transparent p-3">
-                        <div class="pb-2 bg-transparent">
-                            {{ range .badges }}
-                            <span class="badge badge-secondary">{{ . }}</span>
-                            {{ end }}
+        {{ range .Site.Params.projects.categories }}
+        <div class="project-category">
+            <div class="project-category-heading px-3 px-md-5">
+                <h4>{{ .title }}</h4>
+                {{ if .description }}
+                <p>{{ .description }}</p>
+                {{ end }}
+            </div>
+            <div class="row justify-content-center px-3 px-md-5">
+                {{ range .items }}
+                {{ $projectURL := .url }}
+                {{ if and (not $projectURL) (.links) }}
+                {{ $projectURL = (index .links 0).url }}
+                {{ end }}
+                {{ if and (not $projectURL) (.featured) }}
+                {{ $projectURL = .featured.link }}
+                {{ end }}
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card my-3 h-100" title="{{ .title }}">
+                        <div class="card-head">
+                            <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">
-                            {{ if $projectURL }}
-                            <a class="project-title-link" href="{{ $projectURL }}" target="_blank" rel="noopener noreferrer">
+                        <div class="card-body bg-transparent p-3">
+                            <div class="pb-2 bg-transparent">
+                                {{ range .badges }}
+                                <span class="badge badge-secondary">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                            <h5 class="card-title bg-transparent mt-1">
+                                {{ if $projectURL }}
+                                <a class="project-title-link" href="{{ $projectURL }}" target="_blank" rel="noopener noreferrer">
+                                    {{ .title }}
+                                </a>
+                                {{ else }}
                                 {{ .title }}
-                            </a>
-                            {{ else }}
-                            {{ .title }}
-                            {{ end }}
-                        </h5>
-                        <div class="card-text bg-transparent secondary-font">
-                            {{ .content }}
+                                {{ end }}
+                            </h5>
+                            <div class="card-text bg-transparent secondary-font">
+                                {{ .content }}
+                            </div>
                         </div>
                     </div>
                 </div>
+                {{ end }}
             </div>
-            {{ end }}
+        </div>
+        {{ end }}
+        {{ if .Site.Params.projects.items }}
+        <div class="project-category">
+            <div class="row justify-content-center px-3 px-md-5">
+                {{ range .Site.Params.projects.items }}
+                {{ $projectURL := .url }}
+                {{ if and (not $projectURL) (.links) }}
+                {{ $projectURL = (index .links 0).url }}
+                {{ end }}
+                {{ if and (not $projectURL) (.featured) }}
+                {{ $projectURL = .featured.link }}
+                {{ end }}
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card my-3 h-100" title="{{ .title }}">
+                        <div class="card-head">
+                            <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+                        </div>
+                        <div class="card-body bg-transparent p-3">
+                            <div class="pb-2 bg-transparent">
+                                {{ range .badges }}
+                                <span class="badge badge-secondary">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                            <h5 class="card-title bg-transparent mt-1">
+                                {{ if $projectURL }}
+                                <a class="project-title-link" href="{{ $projectURL }}" target="_blank" rel="noopener noreferrer">
+                                    {{ .title }}
+                                </a>
+                                {{ else }}
+                                {{ .title }}
+                                {{ end }}
+                            </h5>
+                            <div class="card-text bg-transparent secondary-font">
+                                {{ .content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+        <div class="row justify-content-center px-3 px-md-5">
             {{ range ( where .Site.RegularPages "Type" "projects" ) }}
             {{ if .Params.showInHome | default true }}
             <div class="col-lg-4 col-md-6 my-3">

@@ -4,6 +4,35 @@
     color: var(--text-secondary-color) !important;
 }
 
+#projects .project-category {
+    margin-top: 2rem;
+}
+
+#projects .project-category + .project-category {
+    margin-top: 3rem;
+}
+
+#projects .project-category-heading {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projects .project-category-heading h4 {
+    color: var(--text-color) !important;
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+#projects .project-category-heading p {
+    color: var(--text-secondary-color) !important;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    margin-bottom: 0.4rem;
+    max-width: 720px;
+}
+
 #projects a {
     text-decoration: none;
     color: var(--text-link-color) !important;
@@ -89,4 +118,10 @@
 
 #projects .float-end .btn:focus {
     box-shadow: none !important;
+}
+
+@media all and (max-width: 768px) {
+    #projects .project-category + .project-category {
+        margin-top: 3.75rem;
+    }
 }

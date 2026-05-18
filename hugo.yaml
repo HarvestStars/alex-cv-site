@@ -71,7 +71,7 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, I am,"
+    intro: "This is,"
     title: "Xiaoxuan Zhang."
     subtitle: ""
     content: "An engineer by training, a quant by aspiration — I build high-performance trading systems powered by parallel computing, with a long-term vision of becoming an independent quantitative trader in the crypto space."
@@ -206,40 +206,73 @@ params:
   # Projects
   projects:
     enable: true
-    items:
-      - title: GeekChomolungma
-        content: A quantitative platform based on C++ and CUDA. It is built up to do quantitative trading in specific cryptocurrency exchanges. Still working on it.
-        image: /images/projects/GeekChomolungma.jpg
-        badges:
-          - "C++"
-          - "CUDA"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/GeekChomolungma
+    categories:
+      - title: "Crypto Trading Infrastructure"
+        description: ""
+        items:
+          - title: ChomoSyncer
+            content: A high-performance Binance market data synchronizer that streams multi-symbol cryptocurrency Kline data in real time, distributes updates through Redis Streams, and persists historical data into MongoDB for research, backtesting, and downstream trading systems.
+            image: /images/projects/chomoSyncworkflow.jpg
+            badges:
+              - "C++"
+              - "Redis/MongoDB"
+              - "Binance API"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/GeekChomolungma/ChomoSyncer
 
-      - title: Lava
-        content: A proof-of-capacity (PoC) based cryptocurrency forked from Bitcoin Core.
-        image: /images/projects/lava.png
-        badges:
-          - "C++"
-          - "Bitcoin"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/lavaio/lava
+          - title: Binance Orderbook Visualizer
+            content: A real-time 3D visualization app for Binance order books, using streaming depth data to reveal market microstructure, liquidity shifts, best bid/ask trajectories, and transient order-book imbalances.
+            image: /images/projects/binance-orderbook-demo.gif
+            badges:
+              - "Python"
+              - "Binance"
+              - "WebSocket"
 
-      - title: Option Pricing
-        content: Numerical methods for option pricing — volatility smile modeling and computational finance assignments.
-        image: /images/projects/smile.png
-        featured:
-          name: Article
-          link: /images/projects/Computational_finance_assignment3_Xiaoxuan_Zhang.pdf
-        badges:
-          - "Option Pricing"
-          - "Volatility"
-          - "Smile"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/HarvestStars/cf_assignment1
+            links:
+              - icon: fab fa-github
+                url: https://github.com/GeekChomolungma/Binance-Orderbook
+
+          - title: Kline Preprocess
+            content: A cryptocurrency K-line preprocessing pipeline that standardizes Binance OHLCV data and generates no-lookahead technical indicator features for downstream consumers such as traditional price-volume models and time-series AI foundation models.
+            image: /images/projects/kline.jpg
+            badges:
+              - "OHLCV"
+              - "TA"
+
+            links:
+              - icon: fab fa-github
+                url: https://github.com/GeekChomolungma/kline-preprocess
+
+      - title: "Financial Applications"
+        description: "Computational finance, option pricing, and trading-oriented financial models."
+        items:
+          - title: Option Pricing
+            content: Numerical methods for option pricing — volatility smile modeling and computational finance assignments.
+            image: /images/projects/smile.png
+            featured:
+              name: Article
+              link: /images/projects/Computational_finance_assignment3_Xiaoxuan_Zhang.pdf
+            badges:
+              - "Option Pricing"
+              - "Volatility"
+              - "Smile"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/HarvestStars/cf_assignment1
+
+      - title: "Blockchain"
+        description: "Cryptocurrency protocol engineering, consensus modifications, and network tooling."
+        items:
+          - title: Lava
+            content: A proof-of-capacity (PoC) based cryptocurrency forked from Bitcoin Core.
+            image: /images/projects/lava.png
+            badges:
+              - "C++"
+              - "Bitcoin"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/lavaio/lava
 
   # Contact
   contact:
