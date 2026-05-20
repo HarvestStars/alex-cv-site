@@ -203,10 +203,39 @@ params:
         date: "Sep 9, 2025"
         url: "https://www.linkedin.com/pulse/simple-math-behind-foundation-models-cross-entropy-magic-zhang-cf1gc/"
 
+      - title: "Forecasting, Uncertainty and Excitation: A Unified Framework for Cryptocurrency Trading"
+        authors: "Xiaoxuan Zhang"
+        venue: "Master's Thesis, University of Amsterdam"
+        type: "Thesis"
+        year: "2026"
+        url: "/Articles/Forecasting,%20Uncertainty%20and%20Excitation%20-%20A%20Unified%20Framework%20for%20Cryptocurrency%20Trading%20by%20Xiaoxuan%20Zhang.pdf"
+
   # Projects
   projects:
     enable: true
     categories:
+      - title: "AI for Financial Time Series"
+        description: ""
+        items:
+          - title: Chronos2 Crypto Forecasting
+            content: Fine-tuning and applying Chronos2, a time-series foundation model, to cryptocurrency price forecasting. The project explores probabilistic multi-horizon prediction on volatile crypto data, with the BTC chart shown here as an illustrative output that changes with training mode, data window, and evaluation setup.
+            image: /images/projects/btc_predict.jpg
+            badges:
+              - "Chronos2"
+              - "TSFM"
+              - "Quantile Forecasting"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/GeekChomolungma/Crypto_Forecast
+
+          - title: Risk-Calibrated Crypto Signal Framework
+            content: Master's thesis project that extends the forecasting pipeline into a trading-signal and backtesting framework. It combines custom loss design for quantile prediction with Hawkes-process market risk modeling, then uses risk-adjusted expected return as a timing signal. The full thesis is linked in the Articles section below.
+            image: /images/projects/btc_equity_01.png
+            badges:
+              - "Custom Loss"
+              - "Hawkes Process"
+              - "Backtesting"
+
       - title: "Crypto Trading Infrastructure"
         description: ""
         items:
@@ -244,8 +273,8 @@ params:
               - icon: fab fa-github
                 url: https://github.com/GeekChomolungma/kline-preprocess
 
-      - title: "Financial Applications"
-        description: "Computational finance, option pricing, and trading-oriented financial models."
+      - title: "Financial Models"
+        description: ""
         items:
           - title: Option Pricing
             content: Numerical methods for option pricing — volatility smile modeling and computational finance assignments.
