@@ -74,7 +74,7 @@ params:
     intro: "This is,"
     title: "Xiaoxuan Zhang."
     subtitle: ""
-    content: "An engineer by training, a quant by aspiration — I build high-performance trading systems powered by parallel computing, with a long-term vision of becoming an independent quantitative trader in the crypto space."
+    content: "Software engineer with years of experience in C++, Golang, blockchain infrastructure, and crypto trading systems. Currently focused on applying AI and transformer-based time series models to cryptocurrency markets, bridging quantitative research with real-world trading infrastructure."
     image: /images/me.jpg
     bottomImage:
       enable: true
@@ -291,7 +291,7 @@ params:
                 url: https://github.com/HarvestStars/cf_assignment1
 
       - title: "Blockchain"
-        description: "Cryptocurrency protocol engineering, consensus modifications, and network tooling."
+        description: ""
         items:
           - title: Lava
             content: A proof-of-capacity (PoC) based cryptocurrency forked from Bitcoin Core.

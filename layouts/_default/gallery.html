@@ -1,0 +1,96 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+{{ if .Params.viewer | default true }}
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/gallery.css">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/viewer/viewer.min.css">
+<script src="{{ .Site.Params.staticPath }}/viewer/viewer.min.js"></script>
+{{ end }}
+
+<style>
+#list-page.gallery-page {
+    max-width: 1180px;
+}
+
+.gallery-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--text-secondary-color);
+    line-height: 1.65;
+}
+
+.gallery-body {
+    max-width: 760px;
+    margin: 1rem auto 0;
+    color: var(--text-secondary-color);
+    line-height: 1.65;
+}
+
+.gallery-grid {
+    column-count: 3;
+    column-gap: 1rem;
+    margin-top: 2.25rem;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: .75rem;
+    background-color: var(--secondary-color);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media all and (max-width: 992px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .gallery-grid {
+        column-count: 1;
+    }
+}
+</style>
+{{ end }}
+
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container pt-5 gallery-page" id="list-page">
+    <h2 class="text-center pb-2">{{ .Title }}</h2>
+    {{ with .Params.description }}
+    <p class="gallery-intro text-center">{{ . | emojify }}</p>
+    {{ end }}
+    {{ with .Content }}
+    <div class="gallery-body text-center">
+        {{ . | emojify }}
+    </div>
+    {{ end }}
+
+    <div class="gallery-grid">
+        {{ range .Params.galleryImages }}
+        <figure class="gallery-item">
+            <img class="{{ if $.Params.viewer | default true }}viewer-enabled-image{{ end }}" src="{{ .src }}" alt="{{ .alt | default $.Title }}">
+        </figure>
+        {{ end }}
+    </div>
+</div>
+
+{{ if .Params.viewer | default true }}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var viewer = new Viewer(document.getElementById('list-page'), {
+            ...{{ .Params.viewerOptions }}
+        });
+    });
+</script>
+{{ end }}
+{{ end }}
