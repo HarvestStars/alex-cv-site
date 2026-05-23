@@ -273,9 +273,20 @@ params:
               - icon: fab fa-github
                 url: https://github.com/GeekChomolungma/kline-preprocess
 
-      - title: "Financial Models"
+      - title: "Market Making & Derivatives"
         description: ""
         items:
+          - title: Optiver Academy Market Making
+            content: A one-month Optiver Academy market-making project refactored into a reusable Optibook strategy framework. It implements passive cross-instrument quoting across ETFs, spot products, futures, and index-linked instruments, with shared pricing, quote planning, execution, and risk engines organized around an exchange-state-plan-execute workflow.
+            image: /images/projects/optiver_cert.jpg
+            badges:
+              - "Market Making"
+              - "Optibook"
+              - "Risk Engine"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/HarvestStars/optiver_academy
+
           - title: Option Pricing
             content: Numerical methods for option pricing — volatility smile modeling and computational finance assignments.
             image: /images/projects/smile.png
