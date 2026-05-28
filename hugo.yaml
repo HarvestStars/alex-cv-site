@@ -110,6 +110,22 @@ params:
           - In-depth understanding of probabilistic forecast objectives, especially pinball (quantile) loss, with hands-on analysis of their behavior on fat-tailed distributions.
           - Investigating the transferability and fine-tuning generalization of large-scale TSFMs for forecasting cryptocurrencies such as BTC, ETH, and LTC under rapidly shifting market regimes.
 
+      - job: "Senior Software Engineer"
+        tab: "MicroServices"
+        company: "Mavenir"
+        companyUrl: "https://www.mavenir.com/"
+        date: "Feb 2021 - June 2024"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: |
+          - Developed Golang-based telecom network element management microservices for virtual RAN components such as RU and DU, covering onboarding, version validation, image pull/update workflows, traffic forwarding, and fast outage recovery.
+          - Built and operated a Kubernetes/Docker-deployed microservices cluster using NATS for internal service messaging and Kafka for inter-cluster communication, traffic smoothing, and producer-consumer workload decoupling.
+          - Led high-availability upgrades by compressing and externalizing legacy service state into Couchbase, enabling stateless microservices and improving recovery across multi-instance deployments.
+          - Designed a multi-instance resilience model with shared-memory state synchronization and a load-balancer gateway, strengthening disaster prevention, failover behavior, and service availability under telecom-grade reliability requirements.
+          - Developed a Golang concurrency middleware to control unbounded goroutine growth, combining a channel-based worker pool with dynamic worker scaling and closure-based callback registration for asynchronous, non-blocking event processing.
+
       - job: "Independent Quantitative Trading Developer"
         tab: "Crypto Trading"
         company: "GeekChomolungma"
@@ -138,19 +154,6 @@ params:
           - Led the full lifecycle development of Lava, a proof-of-capacity (PoC) based cryptocurrency forked from Bitcoin Core.
           - Architected and implemented consensus modifications to support PoC mining, enhancing energy efficiency compared to PoW.
           - Oversaw system integration, wallet and miner tools, and network bootstrapping.
-
-      - job: "Senior Software Engineer"
-        tab: "MicroServices"
-        company: "Mavenir"
-        companyUrl: "https://www.mavenir.com/"
-        date: "Feb 2021 - June 2024"
-        featuredLink:
-          enable: false
-        info:
-          enable: false
-        content: |
-          - Led the High-Availability (HA) system design and development of Mavenir's distributed element control platform, ensuring robust uptime and fault tolerance.
-          - Focused on telecom-grade reliability, implementing failover, state recovery, and multi-node synchronization.
 
   # Education
   education:
@@ -235,6 +238,29 @@ params:
               - "Custom Loss"
               - "Hawkes Process"
               - "Backtesting"
+
+      - title: "Distributed Systems"
+        description: ""
+        items:
+          - title: Telecom Network Element Management System
+            content: |
+              Proprietary Mavenir microservices platform for managing virtual telecom network elements such as RU and DU across onboarding, version validation, image pull/update workflows, traffic forwarding, and fast outage recovery. Built in Golang and deployed on Kubernetes/Docker, the system used NATS for internal messaging and Kafka for inter-cluster communication, traffic smoothing, and producer-consumer decoupling.
+            image: /images/projects/HA.png
+            badges:
+              - "Golang"
+              - "Kubernetes"
+              - "NATS/Kafka"
+              - "Telecom"
+
+          - title: Gofer
+            content: |
+              Proprietary Golang concurrency middleware developed at Mavenir for high-concurrency telecom microservices. Gofer uses a two-layer design: a channel-based worker pool with dynamic worker scaling at the bottom, and a closure-based asynchronous callback framework at the top. It prevents uncontrolled goroutine growth while keeping business workflows event-driven, elastic, and non-blocking.
+            image: /images/projects/mavenir.png
+            badges:
+              - "Golang"
+              - "Concurrency"
+              - "Worker Pool"
+              - "Async Callbacks"
 
       - title: "Crypto Trading Infrastructure"
         description: ""
